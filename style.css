@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  :root { --text-color:black   ;
+  --bg-url: url(./bg01.png);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --border: white  ;   
+  --surface-color: rgba(255, 255, 255, 0.5);
+  --switch-bg-url: url(./sun.svg);  }
+  
+  .ligth { --text-color:white ;
+  --bg-url: url(./bg02.png);
+  --stroke-color:rgba(0,0,0,0.5);
+  --border: black; 
+  --surface-color: rgba(0,0,0, 0.5);
+  --switch-bg-url: url(./moon.svg);
+     }
+  
+  
+  body {
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-url) ;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    font-family: "Inter", sans-serif;
+    color: var(--text-color)
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 588px;
+    margin: 12px auto 0;
+    padding: 24px;
+    
+  }
+  
+  #profile {
+    text-align: center;
+    padding: 0;
+  }
+  
+  #profile img {
+    width: 112px;
+    height: 112px;
+    display:block ;
+    margin: 0 auto;
+     
+     
+  }
+   
+
+
+
+  #profile p {
+    color: white; 
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px  ;
+    background-color: 0 0 0 0;
+    border-radius: 8px;
+    padding: 8px 16px; /* Ajuste o padding conforme necessário */
+    display: inline-block; /* Faz o fundo ocupar apenas o espaço do texto */
+    text-align: center; /* Garante que o texto dentro do fundo fique centralizado */
+    width: auto; /* Garante que a largura do fundo se ajuste ao texto */
+    margin-left: auto; /* Adiciona margem automática para centralizar o contêiner horizontalmente */
+    margin-right: auto; /* Adiciona margem automática para centralizar o contêiner horizontalmente */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background 0.7s, transform 0.7s; 
+    border: 1.5px solid black;     
+  }
+  
+  
+  #p2 p{ color: white; 
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px  ;
+    background-color: 0 0 0 0;
+    border-radius: 8px;
+    padding: 8px 16px; /* Ajuste o padding conforme necessário */
+    display: block; /* Faz o fundo ocupar apenas o espaço do texto */
+    text-align: center; /* Garante que o texto dentro do fundo fique centralizado */
+    width: auto; /* Garante que a largura do fundo se ajuste ao texto */
+    margin-left: auto; /* Adiciona margem automática para centralizar o contêiner horizontalmente */
+    margin-right: auto; /* Adiciona margem automática para centralizar o contêiner horizontalmente */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background 0.7s, transform 0.7s; 
+    border: 1.5px solid black;     
+        
+}
+
+  #switch {
+        position:  relative;
+        width: 64px;  
+        margin: 0  auto ;}
+  
+  
+  #switch button {width: 32px;
+    height: 32px;
+    background: white  var(--switch-bg-url)  no-repeat center ;
+    border: 0;
+    border-radius: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    animation: slide-out 0.4s forwards;
+    box-shadow: 0 0px 20px rgba(239, 184, 16, 500) ;/* Adiciona sombra azul */
+  
+  }
+  
+  .ligth #switch button {
+  animation: slide-in 0.4s forwards ; 
+  left: 0;
+  }                 
+  
+  #switch button:hover {
+    background: rgba(255, 255, 255, 0.205);
+    border: -50px ;
+    display:block;
+  }
+  
+   
+  
+  
+  
+  #switch span {
+    display: flex;
+    width: 64px ;
+    height:24px ;
+    background: var(--surface-color);
+    border: var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius:9999px ;
+    margin: none ;
+  
+  
+  }                  
+  
+  
+  ul {
+    list-style: none;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    border: 1px solid var(--border) ;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 16px 24px;
+    background: var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: background 0.7s, transform 0.7s;
+    font-weight: 700;
+}
+  
+  ul li a:hover {
+    background: rgba(0, 0, 0, 0);
+    border: 1px var(--text-color);
+    display: flex;
+  }
+  
+  #social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    height: 50px;
+    margin-top: 26px;
+  }
+  
+  #social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color:var(--stroke-color);
+   
+    border-radius: 50%;
+    background-color: rgba(0.5, 0.5, 0.5, 115); /* Fundo branco com 70% de opacidade */
+  }
+  
+  #social-links a:hover {border-image: 2px solid var(--surface-color) ;
+  transition: 0.8s;
+      transform: scale(1.5) ;
+  }
+  
+  footer {
+    padding:8px  ;
+    padding-left: 4px    ;
+    padding-right: 4px; /* Espaçamento interno da caixa */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.2); /* Cor de fundo da caixa */
+    border: 2px solid black; /* Borda ao redor da caixa */
+    border-radius: 8px; /* Canto arredondado opcional */
+    margin: 8px auto; /* Margem automática para centralizar horizontalmente */
+    max-width: 600px; /* Largura máxima da caixa */
+    text-decoration: aliceblue;
+    color: white;
+  }
+  
+  
+  
+  @keyframes slide-in { 
+  from{left: 0;}
+  to {left: 50%;}
+  
+  }
+  
+  @keyframes slide-out {from{left: 50%;}
+  to{left: 0;}}
